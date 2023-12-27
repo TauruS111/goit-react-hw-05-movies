@@ -3,6 +3,8 @@ import Loader from 'components/Loader/Loader';
 
 const Cast = () => {
   const { error, loading, cast } = useFetchCast();
+  const defaultImg =
+    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
 
   return (
     <div>
@@ -26,10 +28,11 @@ const Cast = () => {
                   src={
                     item.profile_path
                       ? [`https://image.tmdb.org/t/p/w500${item.profile_path}`]
-                      : ''
+                      : defaultImg
                   }
                   alt={item.name}
                   width={250}
+                  height={375}
                 />
               </div>
             ))
