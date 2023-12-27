@@ -27,6 +27,7 @@ const MovieDetails = () => {
               }
               alt={movies.title}
               width={250}
+              height={375}
             />
             <div
               style={{
