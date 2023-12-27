@@ -40,7 +40,9 @@ const MovieDetails = () => {
               <p>{movies.overview}</p>
               <h2>Genre</h2>
               <p>
-                <span>{movies.genres[0].name}</span>
+                {movies.genres.map(genre => (
+                  <span key={genre.id}>{genre.name}</span>
+                ))}
               </p>
             </div>
           </div>
